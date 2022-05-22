@@ -19,40 +19,30 @@
     <link rel="stylesheet" href="{{ asset('admin/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('admin/css/skin_color.css') }}">
     @stack('admin-styles')
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body class="hold-transition dark-skin sidebar-mini theme-primary fixed">
+<body class="hold-transition dark-skin sidebar-mini theme-primary fixed body">
 
     <div class="wrapper">
 
         {{-- header --}}
         @include('admin.inc.header')
-        <!-- Left side column. contains the logo and sidebar -->
-        <aside class="main-sidebar">
-            <!-- sidebar-->
-            @include('admin.inc.sidebar')
-
-            <div class="sidebar-footer">
-                <!-- item-->
-                <a href="javascript:void(0)" class="link" data-toggle="tooltip" title=""
-                    data-original-title="Settings" aria-describedby="tooltip92529"><i class="ti-settings"></i></a>
-                <!-- item-->
-                <a href="mailbox_inbox.html" class="link" data-toggle="tooltip" title=""
-                    data-original-title="Email"><i class="ti-email"></i></a>
-                <!-- item-->
-                <a href="javascript:void(0)" class="link" data-toggle="tooltip" title=""
-                    data-original-title="Logout"><i class="ti-lock"></i></a>
-            </div>
-        </aside>
+        <!-- sidebar-->
+        @include('admin.inc.sidebar')
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
-            <div class="container-full">
+            @if (session('success'))
+                <div class="myadmin-alert alert-success mx-4 mt-2"><a href="#" class="closed">&times;</a>
+                    {{ session('success') }}
+                </div>
+            @endif
 
-                <!-- Main content -->
-                @yield('admin-content')
-                <!-- /.content -->
-            </div>
+
+            @yield('admin-content')
         </div>
         <!-- /.content-wrapper -->
 
@@ -340,7 +330,11 @@
     <script src="{{ asset('admin/js/template.js') }}"></script>
     <script src="{{ asset('admin/js/pages/dashboard.js') }}"></script>
 
-
+    <script src="{{ asset('../assets/vendor_components/datatable/datatables.min.js') }}"></script>
+    <script src="{{ asset('admin/js/pages/data-table.js') }}"></script>
+    <script src="{{ asset('../assets/vendor_components/jquery-toast-plugin-master/src/jquery.toast.js') }}"></script>
+    <script src="{{ asset('admin/js/pages/toastr.js') }}"></script>
+    <script src="{{ asset('admin/js/pages/notification.js') }}"></script>
 </body>
 
 </html>

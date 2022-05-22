@@ -27,14 +27,14 @@
             <li class="treeview">
                 <a href="#">
                     <i data-feather="message-circle"></i>
-                    <span>Application</span>
+                    <span>Categories</span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-right pull-right"></i>
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="chat.html"><i class="ti-more"></i>Chat</a></li>
-                    <li><a href="calendar.html"><i class="ti-more"></i>Calendar</a></li>
+                    <li><a href="/admin/categories"><i class="ti-more"></i>Categories</a></li>
+                    <li><a href="/admin/sub-categories"><i class="ti-more"></i>Sub Categories</a></li>
                 </ul>
             </li>
 
