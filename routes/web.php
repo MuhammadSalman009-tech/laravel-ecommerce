@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\SubCategoryController;
 use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -40,4 +41,5 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::group(['prefix' => 'admin','middleware'=>["auth","is_admin"]], function() {
     Route::get('/dashboard', [AdminController::class, 'index'])->name('admin.home');
     Route::resource('categories', CategoryController::class);
+    Route::resource('subcategories', SubCategoryController::class);
 });

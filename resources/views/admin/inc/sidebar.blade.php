@@ -34,7 +34,7 @@
                 </a>
                 <ul class="treeview-menu">
                     <li><a href="/admin/categories"><i class="ti-more"></i>Categories</a></li>
-                    <li><a href="/admin/sub-categories"><i class="ti-more"></i>Sub Categories</a></li>
+                    <li><a href="/admin/subcategories"><i class="ti-more"></i>Sub Categories</a></li>
                 </ul>
             </li>
 
