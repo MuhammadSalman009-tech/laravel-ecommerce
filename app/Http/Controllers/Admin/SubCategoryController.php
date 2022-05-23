@@ -105,4 +105,10 @@ class SubCategoryController extends Controller
         SubCategory::findOrFail($id)->delete();
         return redirect()->route("subcategories.index")->with("success","SubCategory Deleted Successfully!");
     }
+    public function getSubCategories($categoryId)
+    {
+        $subcategories=SubCategory::where("category_id",$categoryId)->orderBy("name","ASC")->get();
+        return json_encode($subcategories);
+    }
+
 }

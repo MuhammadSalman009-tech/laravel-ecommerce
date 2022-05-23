@@ -335,6 +335,9 @@
     <script src="{{ asset('../assets/vendor_components/jquery-toast-plugin-master/src/jquery.toast.js') }}"></script>
     <script src="{{ asset('admin/js/pages/toastr.js') }}"></script>
     <script src="{{ asset('admin/js/pages/notification.js') }}"></script>
+    <script src="{{ asset('../assets/vendor_components/bootstrap-tagsinput/dist/bootstrap-tagsinput.js') }}"></script>
+    <script src="{{ asset('../assets/vendor_components/ckeditor/ckeditor.js') }}"></script>
+    <script src="{{ asset('admin/js/pages/editor.js') }}"></script>
 </body>
 
 </html>
